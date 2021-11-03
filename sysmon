@@ -6,7 +6,7 @@
 printf "%-10s%-15s%-15s%s\n" "PID" "OWNER" "MEMORY" "COMMAND"
 
 function sysmon_main() {
-    RAWIN=$(ps -u agent -o pid,user,%mem,command x | grep -v PID | awk '{printf $1":"$2":"}{for(i=4;i<=NF;++i)printf $i""FS ; print ""}')
+    RAWIN=$(ps -o pid,user,%mem,command ax | grep -v PID | awk '{printf $1":"$2":"}{for(i=4;i<=NF;++i)printf $i""FS ; print ""}')
 
     for i in $RAWIN
     do
