@@ -10,6 +10,10 @@ Clone the GitHub repository:
 
 `$ git clone https://github.com/shovon8/sysmon.git`
 
+Make the script executable.
+
+`chmod +x sysmon`
+
 Move the shell script to any directory in the PATH. I prefer the `/usr/bin` directory.
 
 `$ sudo mv sysmon/sysmon /usr/bin`
